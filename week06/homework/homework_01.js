@@ -1,7 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
 function draw() {
 
   background(40);
@@ -10,6 +6,12 @@ function draw() {
   strokeWeight(6);
   stroke(255);
 
-  // for loop goes here
-  // use the circle() function
+  for (let i = 300; i > 0; i -= 50) {
+    if (i % 20 == 0) {
+      fill(0);
+    } else {
+      fill(0);
+    }
+    ellipse(width / 2, height / 2, i, i);
+  }
 }
