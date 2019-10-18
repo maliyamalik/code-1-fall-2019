@@ -11,12 +11,16 @@ function draw() {
 function drawButton(x, y, w, h) {
     let clickedInsideButton = true;
 
-    if (clickedInsideButton) {
-        fill(100, 200, 0);
-    } else {
+    if (mouseIsPressed) {
+      let d = dist(mouseX, mouseY, width/2, height/2);
+  if (d < 99) {
         fill(200, 100, 0);
+  }
+    } else {
+        fill(100, 200, 0);
     }
 
     rectMode(CENTER);
     rect(x, y, w, h, 10);
-}
+
+} 
